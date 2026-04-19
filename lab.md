@@ -1,6 +1,12 @@
 # 🧊 Lab — Analyse des Offres d’Emploi LinkedIn avec Snowflake
 
 ---
+## 👥 Réalisé par
+
+Ce projet a été réalisé par :
+
+- **Jihane Salih**
+- **Katia Lounis**
 
 ## 🎯 Objectif
 
