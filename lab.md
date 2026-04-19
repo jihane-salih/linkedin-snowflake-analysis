@@ -18,6 +18,14 @@ Le pipeline suit une architecture **Medallion** :
 * **SILVER** : nettoyage et transformation
 * **GOLD** : données prêtes pour l’analyse
 
+## 🧩 Modèle de données du projet LinkedIn
+
+Voici la structure des tables utilisées dans ce projet.
+
+Ce modèle représente les différentes entités du dataset LinkedIn et leurs relations, qui seront ensuite exploitées dans les couches Bronze, Silver et Gold.
+
+![architecture_linkedin](images/architecture.png)
+
 ---
 
 # 🟫 1) BRONZE — Ingestion des données
@@ -345,7 +353,6 @@ LEFT JOIN SILVER.COMPANIES_CLEAN c
 -- Check table
 SELECT * FROM SILVER.JOB_ENRICHED;
 ```
-
 
 
 # 🟨 3) GOLD — Analytics 
