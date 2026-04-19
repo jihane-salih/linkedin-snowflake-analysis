@@ -1,17 +1,38 @@
-# 🧊 Lab — Analyse LinkedIn avec Snowflake + Streamlit
+# 🧊 Lab — Analyse des Offres d’Emploi LinkedIn avec Snowflake
 
 ---
 
 ## 🎯 Objectif
 
-Ce lab a pour objectif de construire un pipeline complet de données avec Snowflake (Bronze → Silver → Gold) et de créer un dashboard interactif avec Streamlit afin d’analyser les tendances du marché de l’emploi LinkedIn.
+Ce projet a pour objectif d’analyser les offres d’emploi issues de LinkedIn en utilisant Snowflake pour le traitement des données et Streamlit pour la visualisation.
 
-Nous allons :
-- Charger des données depuis S3 (CSV + JSON)
-- Construire une architecture de données en couches
-- Nettoyer et transformer les données
-- Créer des KPIs métiers
-- Visualiser les résultats avec Streamlit
+L’objectif est de transformer des données brutes en indicateurs exploitables afin de comprendre les tendances du marché de l’emploi.
+
+---
+
+## 🏗️ Architecture des données
+
+Le pipeline suit une architecture **Medallion** :
+
+* **BRONZE** : ingestion des données brutes
+* **SILVER** : nettoyage et transformation
+* **GOLD** : données prêtes pour l’analyse
+
+---
+
+# 🟫 1) BRONZE — Ingestion des données
+
+## 🔹 Description
+
+Cette étape consiste à charger les données brutes depuis un bucket S3 dans Snowflake sans transformation.
+
+Nous utilisons :
+
+* un stage externe
+* des formats CSV et JSON
+* la commande COPY INTO
+
+---
 ```sql
 
 -- =========================
