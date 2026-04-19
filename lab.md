@@ -346,11 +346,25 @@ LEFT JOIN SILVER.COMPANIES_CLEAN c
 SELECT * FROM SILVER.JOB_ENRICHED;
 
 
--- =========================
--- GOLD LAYER (ANALYTICS)
--- =========================
+🟨 3) GOLD — Analytics 
+🔹 Description
 
--- Create industry dimension table
+Cette couche contient :
+
+ Cette couche correspond à la couche "métier" du projet.
+ Elle contient des tables prêtes pour l’analyse et la visualisation.
+ Les données sont agrégées et organisées pour répondre directement aux questions du TP.
+
+ 
+
+-- =========================================================
+-- DIMENSION INDUSTRY
+-- =========================================================
+-- Nous avons commencé par créer une table de dimension industrie.
+-- Cette table sert à transformer les industry_id (non lisibles)
+-- en noms d’industries compréhensibles (ex: IT, Finance, Healthcare).
+-- Elle sera utilisée dans toutes les analyses par secteur.
+
 CREATE OR REPLACE TABLE GOLD.DIM_INDUSTRY AS
 SELECT DISTINCT
     industry_id,
@@ -376,7 +390,13 @@ SELECT DISTINCT
 FROM SILVER.JOB_INDUSTRIES;
 
 
--- Map jobs to industries
+-- =========================================================
+-- JOB ↔ INDUSTRY LINKING TABLE
+-- =========================================================
+-- Ensuite, nous avons créé une table de liaison entre les jobs et leurs industries.
+-- Cela permet d’associer chaque offre d’emploi à un secteur précis.
+-- Cette étape est essentielle pour toutes les analyses par industrie.
+
 CREATE OR REPLACE TABLE GOLD.JOB_INDUSTRY AS
 SELECT
     ji.job_id,
@@ -386,9 +406,11 @@ LEFT JOIN GOLD.DIM_INDUSTRY di
     ON ji.industry_id = di.industry_id;
 
 
--- =========================
--- TOP JOB TITLES PER INDUSTRY
--- =========================
+-- =========================================================
+-- ANALYSE 1 : TOP 10 TITRES DE POSTES PAR INDUSTRIE
+-- =========================================================
+-- Objectif : comprendre quels sont les postes les plus demandés dans chaque secteur.
+-- Cette analyse permet d’identifier les tendances du marché de l’emploi par industrie.
 
 CREATE OR REPLACE TABLE GOLD.TOP_JOBS_BY_INDUSTRY AS
 SELECT *
@@ -411,9 +433,11 @@ FROM (
 WHERE rn <= 10;
 
 
--- =========================
--- TOP SALARIES PER INDUSTRY
--- =========================
+-- =========================================================
+-- ANALYSE 2 : TOP 10 SALAIRES PAR INDUSTRIE
+-- =========================================================
+-- Objectif : identifier les postes les mieux rémunérés dans chaque secteur.
+-- Cela permet d’analyser les opportunités financières par industrie.
 
 CREATE OR REPLACE TABLE GOLD.TOP_SALARIES_BY_INDUSTRY AS
 SELECT *
@@ -436,9 +460,11 @@ FROM (
 WHERE rn <= 10;
 
 
--- =========================
--- JOBS BY INDUSTRY
--- =========================
+-- =========================================================
+-- ANALYSE 3 : RÉPARTITION DES OFFRES PAR INDUSTRIE
+-- =========================================================
+-- Objectif : analyser quels secteurs publient le plus d’offres d’emploi.
+-- Cela permet d’identifier les industries les plus actives sur le marché.
 
 CREATE OR REPLACE TABLE GOLD.INDUSTRY_DISTRIBUTION AS
 SELECT
@@ -448,9 +474,11 @@ FROM GOLD.JOB_INDUSTRY
 GROUP BY industry_name;
 
 
--- =========================
--- COMPANY SIZE DISTRIBUTION
--- =========================
+-- =========================================================
+-- ANALYSE 4 : RÉPARTITION PAR TAILLE D’ENTREPRISE
+-- =========================================================
+-- Objectif : comprendre quelles tailles d’entreprises recrutent le plus.
+-- Cela permet de distinguer startups, PME et grandes entreprises.
 
 CREATE OR REPLACE TABLE GOLD.COMPANY_SIZE AS
 SELECT
@@ -460,9 +488,12 @@ FROM SILVER.COMPANIES_CLEAN
 GROUP BY company_size_label;
 
 
--- =========================
--- WORK TYPE DISTRIBUTION
--- =========================
+-- =========================================================
+-- ANALYSE 5 : RÉPARTITION PAR TYPE D’EMPLOI
+-- =========================================================
+-- Objectif : analyser les types de contrats les plus proposés
+-- (full-time, part-time, contract, etc.).
+-- Cela permet de comprendre la structure du marché de l’emploi.
 
 CREATE OR REPLACE TABLE GOLD.WORK_TYPE AS
 SELECT
