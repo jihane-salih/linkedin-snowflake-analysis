@@ -783,7 +783,7 @@ with c2:
 
 ###  Répartition des offres d’emploi par type d’emploi (temps plein, stage, temps partiel).
 
-![vue_ensemble](images/vue_ensemble.jpeg)
+![vue_ensemble](images/vue_ensemble_marche.jpeg)
 
 ```sql
 
