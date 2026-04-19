@@ -346,8 +346,11 @@ LEFT JOIN SILVER.COMPANIES_CLEAN c
 SELECT * FROM SILVER.JOB_ENRICHED;
 ```
 
-🟨 3) GOLD — Analytics 
-🔹 Description
+
+
+# 🟨 3) GOLD — Analytics 
+
+## 🔹 Description
 
 Cette couche contient :
 
