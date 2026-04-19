@@ -817,10 +817,9 @@ st.markdown("""
 ```
 ### 🔹 Répartition par tailles d'entreprises
 
-###   
 
-![Repartition_par_taille](images/Repartition_par_taille.jpeg)
 
+![Repartition par taille](images/Repartition_par_taille.jpeg)
 
 ```sql
 
