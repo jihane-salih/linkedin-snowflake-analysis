@@ -815,13 +815,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 ```
-### 🔹 Répartition par tailles d'entreprises
 
+### 🔹 Répartition par tailles d'entreprises
 
 
 ![Repartition par taille](images/Repartition_par_taille.jpeg)
 
-```sql
+
 
 
 
