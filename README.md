@@ -12,6 +12,7 @@ Nous allons :
 - Nettoyer et transformer les données
 - Créer des KPIs métiers
 - Visualiser les résultats avec Streamlit
+```sql
 
 -- =========================
 -- DATABASE + SCHEMAS
@@ -217,12 +218,18 @@ FILE_FORMAT = (type = 'json');
 
 -- Check data
 SELECT * FROM linkedin.bronze.company_industries;
+```
 
+
+
+
+```sql
 -- =========================
 -- SILVER LAYER (CLEAN DATA)
 -- =========================
 
 -- Create companies clean table
+
 CREATE OR REPLACE TABLE SILVER.COMPANIES_CLEAN AS
 SELECT
     TRIM(TO_VARCHAR(f.value:"company_id")) AS company_id,
