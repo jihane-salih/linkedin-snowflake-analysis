@@ -803,16 +803,6 @@ chart_company = alt.Chart(company_size).mark_bar(color="#1D9BF0").encode(
 
 st.altair_chart(chart_company, use_container_width=True)
 
-```
-### 🔹 Répartition par tailles d'entreprises
-
-###   
-
-![KPI du dashboard](images/repartition_par_taille.jpeg)
-
-```sql
-
-
 # =========================
 # FOOTER
 # =========================
@@ -823,6 +813,16 @@ st.markdown("""
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="22">
 </div>
 """, unsafe_allow_html=True)
+
+```
+### 🔹 Répartition par tailles d'entreprises
+
+###   
+
+![KPI du dashboard](images/Repartition_par_taille.jpeg)
+
+
+```sql
 
 
 
