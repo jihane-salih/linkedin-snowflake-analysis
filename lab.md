@@ -749,7 +749,7 @@ st.markdown("## 🌍 Vue d’ensemble du marché")
 c1, c2 = st.columns(2)
 
 with c1:
-    st.markdown('<div class="section-title">Répartition des industries</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Répartition des offres d’emploi par secteur d’activité</div>', unsafe_allow_html=True)
 
     chart_industry = alt.Chart(industry_dist).mark_bar(color="#60A5FA").encode(
         x="TOTAL_JOBS:Q",
@@ -760,12 +760,12 @@ with c1:
 
 
 # ==============================
-# ANALYSE 4 : TYPES DE CONTRACT 
+# ANALYSE 4 : TYPES D EMPLOI 
 # ==============================
 
 
 with c2:
-    st.markdown('<div class="section-title">💼 Types de contrat</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">💼 Répartition des offres d’emploi par type d’emploi</div>', unsafe_allow_html=True)
 
     pie = alt.Chart(work_type).mark_arc().encode(
         theta="TOTAL_JOBS:Q",
