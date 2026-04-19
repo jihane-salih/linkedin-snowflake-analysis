@@ -1,4 +1,4 @@
-# 🧊 Lab — Analyse des Offres d’Emploi LinkedIn avec Snowflake
+# 🧊 Projet — Analyse des Offres d’Emploi LinkedIn avec Snowflake
 
 ---
 ## 👥 Réalisé par
