@@ -3,8 +3,6 @@
 ---
 ## 👥 Réalisé par
 
-Ce projet a été réalisé par :
-
 - **Jihane Salih**
 - **Katia Lounis**
 
