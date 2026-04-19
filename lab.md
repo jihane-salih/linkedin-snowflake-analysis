@@ -344,7 +344,7 @@ LEFT JOIN SILVER.COMPANIES_CLEAN c
 
 -- Check table
 SELECT * FROM SILVER.JOB_ENRICHED;
-
+```
 
 🟨 3) GOLD — Analytics 
 🔹 Description
@@ -355,8 +355,8 @@ Cette couche contient :
  Elle contient des tables prêtes pour l’analyse et la visualisation.
  Les données sont agrégées et organisées pour répondre directement aux questions du TP.
 
- 
 
+```sql
 -- =========================================================
 -- DIMENSION INDUSTRY
 -- =========================================================
