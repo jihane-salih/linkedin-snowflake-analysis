@@ -724,6 +724,8 @@ with col2:
 ```
 ### 🔹 Analyse du Marché
 
+###
+
 ![KPI du dashboard](images/analyse_du_marche.jpeg)
 
 ```sql
@@ -771,13 +773,13 @@ with c2:
 
 
 ```
-### 🔹 Analyse du Marché
+### 🔹 Vue d'ensemble du Marché
+
+###
 
 ![KPI du dashboard](images/vue_ensemble.jpeg)
 
 ```sql
-
-
 
 
 
@@ -794,6 +796,15 @@ chart_company = alt.Chart(company_size).mark_bar(color="#1D9BF0").encode(
 )
 
 st.altair_chart(chart_company, use_container_width=True)
+
+```
+### 🔹 Répartition par tailles d'entreprises
+
+###
+
+![KPI du dashboard](images/repartition_par_taille.jpeg)
+
+```sql
 
 
 # =========================
