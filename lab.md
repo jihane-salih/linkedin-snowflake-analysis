@@ -724,7 +724,11 @@ with col2:
 ```
 ### 🔹 Analyse du Marché
 
-###
+###  Top 10 des titres de postes les plus publiés par industrie.
+
+###  Top 10 des postes les mieux rémunérés par industrie.
+
+### 
 
 ![KPI du dashboard](images/analyse_du_marche.jpeg)
 
@@ -775,7 +779,9 @@ with c2:
 ```
 ### 🔹 Vue d'ensemble du Marché
 
-###
+###  Répartition des offres d’emploi par secteur d’activité.
+
+###  Répartition des offres d’emploi par type d’emploi (temps plein, stage, temps partiel).
 
 ![KPI du dashboard](images/vue_ensemble.jpeg)
 
@@ -800,7 +806,7 @@ st.altair_chart(chart_company, use_container_width=True)
 ```
 ### 🔹 Répartition par tailles d'entreprises
 
-###
+###   
 
 ![KPI du dashboard](images/repartition_par_taille.jpeg)
 
@@ -817,4 +823,6 @@ st.markdown("""
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="22">
 </div>
 """, unsafe_allow_html=True)
+
+
 
