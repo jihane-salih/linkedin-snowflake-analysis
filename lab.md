@@ -730,7 +730,7 @@ with col2:
 
 ### 
 
-![KPI du dashboard](images/analyse_du_marche.jpeg)
+![analyse_du_marche](images/analyse_du_marche.jpeg)
 
 ```sql
 
@@ -783,7 +783,7 @@ with c2:
 
 ###  Répartition des offres d’emploi par type d’emploi (temps plein, stage, temps partiel).
 
-![KPI du dashboard](images/vue_ensemble.jpeg)
+![vue_ensemble](images/vue_ensemble.jpeg)
 
 ```sql
 
@@ -819,7 +819,7 @@ st.markdown("""
 
 ###   
 
-![KPI du dashboard](images/Repartition_par_taille.jpeg)
+![Repartition_par_taille](images/Repartition_par_taille.jpeg)
 
 
 ```sql
