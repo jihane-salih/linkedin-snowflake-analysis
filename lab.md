@@ -24,7 +24,7 @@ Voici la structure des tables utilisées dans ce projet.
 
 Ce modèle représente les différentes entités du dataset LinkedIn et leurs relations, qui seront ensuite exploitées dans les couches Bronze, Silver et Gold.
 
-![architecture_linkedin](images/architecture.png)
+![architecture_linkedin](images/architecture_linkedin.png)
 
 ---
 
